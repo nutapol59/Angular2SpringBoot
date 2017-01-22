@@ -1,0 +1,7 @@
+<h3>Heroes:</h3>
+<ul>
+  <li *ngFor="let customer of customers">{{customer.name}}</li>
+</ul>
+<label>New hero name: <input #newCustomerName /></label>
+<button (click)="addHero(newCustomerName.value); newCustomerName.value=''">Add Hero</button>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
